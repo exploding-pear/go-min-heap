@@ -1,9 +1,15 @@
 pipeline{
     agent any
+    tools {
+        go 'go-1.15.4'
+    }
+    environment {
+        GO111MODULE = 'on'
+    }
     stages{
-        stage('build') {
+        stage('compile') {
             steps {
-                echo 'Hello, world!'
+                sh 'go build'
             }
         }
     }
