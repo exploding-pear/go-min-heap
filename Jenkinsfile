@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('compile') {
             steps {
-                sh 'go build'
+                sh 'go-1.15 build'
             }
         }
     }
